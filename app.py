@@ -66,9 +66,9 @@ def index():
 
 @app.route('/run', methods=['POST'])
 def run():
-    processor = DataInsightProcessor('C:/Users/ISHAN/OneDrive/Desktop/project/intel/income.csv')
+    processor = DataInsightProcessor('income.csv')
     processor.run_all_steps()
-    return 'Processing complete! Check the console for output.'
+    return '<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; font-family: Arial, sans-serif;"><div style="text-align: center; border: 2px solid #4CAF50; border-radius: 10px; padding: 20px; background-color: #ffffff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"><h1 style="color: #4CAF50; font-size: 24px; margin: 0;">✅ Processing Complete!</h1><p style="color: #333; font-size: 18px; margin: 10px 0;">Check the console for output.</p></div>';
 
 if __name__ == '__main__':
     app.run(debug=True)
